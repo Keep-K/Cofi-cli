@@ -1,0 +1,31 @@
+{
+  "name": "@cofi/cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "cofi_cli": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsx watch --env-file=../../.env src/index.ts",
+    "build": "tsc",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@cofi/core": "workspace:*",
+    "@cofi/shared": "workspace:*",
+    "@supabase/supabase-js": "^2.49.4",
+    "commander": "^13.1.0",
+    "@inquirer/prompts": "^7.6.0",
+    "chalk": "^5.4.1",
+    "ora": "^8.2.0",
+    "open": "^10.1.2",
+    "conf": "^13.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "tsx": "^4.19.4",
+    "@types/node": "^22.15.3"
+  }
+}
